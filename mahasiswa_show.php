@@ -41,11 +41,11 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://localhost/webProgramming/sistemInformasiAlumni/index.php">Sistem Informasi Alumni</a>
+                <a class="navbar-brand" href="<?= $pathUrl ?>index.php">Sistem Informasi Alumni</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="http://localhost/webProgramming/sistemInformasiAlumni/mahasiswa_index.php">Data Mahasiswa</a></li>
+                    <li><a href="<?= $pathUrl ?>mahasiswa_index.php">Data Mahasiswa</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 
@@ -57,7 +57,7 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
                             in: <?php echo $userRow['email']; ?>
                             &nbsp;<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="http://localhost/webProgramming/sistemInformasiAlumni/mahasiswa_show.php?nim=<?= $userRow['nim']; ?>"><span class="glyphicon glyphicon-user"></span>&nbsp;Profile</a></li>
+                            <li><a href="<?= $pathUrl ?>mahasiswa_show.php?nim=<?= $userRow['nim']; ?>"><span class="glyphicon glyphicon-user"></span>&nbsp;Profile</a></li>
                             <li><a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a></li>
                         </ul>
                     </li>
@@ -74,7 +74,7 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
             <div class="form-group">
                 <label for="foto" class="col-sm-2 control-label">Foto</label>
                 <div class="col-md-6">                
-                    <img class="media-object" src="http://localhost/webProgramming/sistemInformasiAlumni/upload/<?= $mahasiswa['foto'] ?>" alt="Image" class="img img-responsive" style="height: 80px;">
+                    <img class="media-object" src="<?= $pathUrl ?>upload/<?= $mahasiswa['foto'] ?>" alt="Image" class="img img-responsive" style="height: 80px;">
                 </div>
             </div>
 

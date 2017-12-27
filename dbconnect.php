@@ -5,6 +5,8 @@ $db_name = "sistem_informasi_alumni";
 $db_user = "root";
 $db_pass = "";
 
+$pathUpload = "c:/xampp/htdocs/webProgramming/sistemInformasiAlumni/upload/";
+$pathUrl = "http://localhost/webProgramming/sistemInformasiAlumni/";
 
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 

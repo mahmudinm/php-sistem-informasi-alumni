@@ -34,11 +34,11 @@ $mahasiswas = $conn->query("SELECT * FROM users");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://localhost/webProgramming/sistemInformasiAlumni/index.php">Sistem Informasi Alumni</a>
+                <a class="navbar-brand" href="<?= $pathUrl ?>index.php">Sistem Informasi Alumni</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="http://localhost/webProgramming/sistemInformasiAlumni/mahasiswa_index.php">Data Mahasiswa</a></li>
+                    <li><a href="<?= $pathUrl ?>mahasiswa_index.php">Data Mahasiswa</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 
@@ -50,7 +50,7 @@ $mahasiswas = $conn->query("SELECT * FROM users");
                             in: <?php echo $userRow['email']; ?>
                             &nbsp;<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="http://localhost/webProgramming/sistemInformasiAlumni/mahasiswa_show.php?nim=<?= $userRow['nim']; ?>"><span class="glyphicon glyphicon-user"></span>&nbsp;Profile</a></li>
+                            <li><a href="<?= $pathUrl ?>mahasiswa_show.php?nim=<?= $userRow['nim']; ?>"><span class="glyphicon glyphicon-user"></span>&nbsp;Profile</a></li>
                             <li><a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a></li>
                         </ul>
                     </li>
@@ -62,7 +62,7 @@ $mahasiswas = $conn->query("SELECT * FROM users");
     <br> 
     <div class="container">
         <h3>Data Mahasiswa</h3>
-        <a href="http://localhost/webProgramming/sistemInformasiAlumni/mahasiswa_create.php" class="btn btn-primary btn-sm pull-right">Tambah Mahasiswa</a>
+        <a href="<?= $pathUrl ?>mahasiswa_create.php" class="btn btn-primary btn-sm pull-right">Tambah Mahasiswa</a>
         <br>
         <br>
         <table class="table table-bordered">
@@ -93,8 +93,8 @@ $mahasiswas = $conn->query("SELECT * FROM users");
                         <td><?= $mahasiswa['handphone']; ?></td>
                         <td><?= $mahasiswa['status']; ?></td>
                         <td>
-                            <a href="http://localhost/webProgramming/sistemInformasiAlumni/mahasiswa_edit.php?nim=<?= $mahasiswa['nim']; ?>" class="btn btn-xs btn-info">Edit</a> 
-                            <a href="http://localhost/webProgramming/sistemInformasiAlumni/mahasiswa_delete.php?nim=<?= $mahasiswa['nim']; ?>" class="btn btn-xs btn-danger">Delete</a>
+                            <a href="<?= $pathUrl ?>mahasiswa_edit.php?nim=<?= $mahasiswa['nim']; ?>" class="btn btn-xs btn-info">Edit</a> 
+                            <a href="<?= $pathUrl ?>mahasiswa_delete.php?nim=<?= $mahasiswa['nim']; ?>" class="btn btn-xs btn-danger">Delete</a>
                         </td>
                     </tr>
                 <?php endwhile ?>

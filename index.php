@@ -34,12 +34,12 @@ $mahasiswas = $conn->query("SELECT * FROM users");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://localhost/webProgramming/sistemInformasiAlumni/index.php">Sistem Informasi Alumni</a>
+                <a class="navbar-brand" href="<?= $pathUrl; ?>index.php">Sistem Informasi Alumni</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <?php if ($userRow['admin'] == 1): ?>                    
-                        <li><a href="http://localhost/webProgramming/sistemInformasiAlumni/mahasiswa_index.php">Data Mahasiswa</a></li>
+                        <li><a href="<?= $pathUrl ?>mahasiswa_index.php">Data Mahasiswa</a></li>
                     <?php endif ?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -52,7 +52,7 @@ $mahasiswas = $conn->query("SELECT * FROM users");
                             in: <?php echo $userRow['email']; ?>
                             &nbsp;<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="http://localhost/webProgramming/sistemInformasiAlumni/mahasiswa_show.php?nim=<?= $userRow['nim']; ?>"><span class="glyphicon glyphicon-user"></span>&nbsp;Profile</a></li>
+                            <li><a href="<?= $pathUrl ?>mahasiswa_show.php?nim=<?= $userRow['nim']; ?>"><span class="glyphicon glyphicon-user"></span>&nbsp;Profile</a></li>
                             <li><a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a></li>
                         </ul>
                     </li>
@@ -67,7 +67,7 @@ $mahasiswas = $conn->query("SELECT * FROM users");
                 <div class="jumbotron" style="padding: 30px;">
                     <div class="media">
                         <a class="pull-left" href="#" style="padding-right: 20px;">
-                            <img class="media-object" src="http://localhost/webProgramming/sistemInformasiAlumni/upload/<?= $mahasiswa['foto'] ?>" alt="Image" class="img img-responsive" style="height: 80px;">
+                            <img class="media-object" src="<?= $pathUrl ?>upload/<?= $mahasiswa['foto'] ?>" alt="Image" class="img img-responsive" style="height: 80px;">
                         </a>
                         <div class="media-body">
                             <h4 class="media-heading"><b><?= $mahasiswa['username'] ?></b></h4>
@@ -84,7 +84,7 @@ $mahasiswas = $conn->query("SELECT * FROM users");
                                 <br>
                                 Email : <?= $mahasiswa['email'] ?>
                                 <br>  
-                                <a href="http://localhost/webProgramming/sistemInformasiAlumni/mahasiswa_show.php?nim=<?= $mahasiswa['nim']; ?>" class="btn btn-link pull-right">Selengkapnya</a>
+                                <a href="<?= $pathUrl ?>mahasiswa_show.php?nim=<?= $mahasiswa['nim']; ?>" class="btn btn-link pull-right">Selengkapnya</a>
                             </div>
                         </div>
                     </div>                    
