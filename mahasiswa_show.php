@@ -51,6 +51,10 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 
+                    <li>
+                        <a href="lowongan.php">Lowongan</a>
+                    </li>
+                    
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">
