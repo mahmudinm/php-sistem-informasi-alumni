@@ -38,10 +38,13 @@ $mahasiswas = $conn->query("SELECT * FROM users");
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="<?= $pathUrl ?>mahasiswa_index.php">Data Mahasiswa</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 
+                    <?php if ($userRow['admin'] == 1): ?>                    
+                        <li><a href="<?= $pathUrl ?>mahasiswa_index.php">Dashboard</a></li>
+                    <?php endif ?>
+                    
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">
@@ -61,7 +64,13 @@ $mahasiswas = $conn->query("SELECT * FROM users");
 
     <br> 
     <div class="container">
+        <div class="well">
+            <a href="<?= $pathUrl ?>mahasiswa_index.php" class="btn btn-sm btn-primary">Mahasiswa</a> 
+            <a href="<?= $pathUrl ?>lowongan_index.php" class="btn btn-sm btn-primary">Lowongan</a>
+        </div>
         <h3>Data Mahasiswa</h3>
+
+
         <a href="<?= $pathUrl ?>mahasiswa_create.php" class="btn btn-primary btn-sm pull-right">Tambah Mahasiswa</a>
         <br>
         <br>

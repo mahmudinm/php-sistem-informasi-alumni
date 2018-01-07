@@ -45,7 +45,9 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="<?= $pathUrl ?>mahasiswa_index.php">Data Mahasiswa</a></li>
+                    <?php if ($userRow['admin'] == 1): ?>                    
+                        <li><a href="<?= $pathUrl ?>mahasiswa_index.php">Dashboard</a></li>
+                    <?php endif ?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 

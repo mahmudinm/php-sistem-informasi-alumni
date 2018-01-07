@@ -12,10 +12,10 @@ $res = $conn->query("SELECT * FROM users WHERE id=" . $_SESSION['user']);
 $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
 
 if (isset($_GET['search'])) {    
-    $username = $_GET['search'];
-    $mahasiswas = $conn->query("SELECT * FROM users WHERE username LIKE '%$username%'");
+    $nama = $_GET['search'];
+    $lowongans = $conn->query("SELECT * FROM lowongan WHERE nama LIKE '%$nama%'");
 } else {
-    $mahasiswas = $conn->query("SELECT * FROM users");
+    $lowongans = $conn->query("SELECT * FROM lowongan");
 }
 
 ?>
@@ -77,28 +77,13 @@ if (isset($_GET['search'])) {
 
     <div class="container">
         <div class="col-md-10">
-            <?php while ($mahasiswa = $mahasiswas->fetch_assoc()) { ?>
+            <?php while ($mahasiswa = $lowongans->fetch_assoc()) { ?>
                 <div class="jumbotron" style="padding: 30px;">
                     <div class="media">
-                        <a class="pull-left" href="#" style="padding-right: 20px;">
-                            <img class="media-object" src="<?= $pathUrl ?>upload/<?= $mahasiswa['foto'] ?>" alt="Image" class="img img-responsive" style="height: 80px;">
-                        </a>
                         <div class="media-body">
-                            <h4 class="media-heading"><b><?= $mahasiswa['username'] ?></b></h4>
-                            <div class="col-md-5">
-                                NIM : <?= $mahasiswa['nim'] ?> 
-                                <br>
-                                Program Studi : <?= $mahasiswa['program_studi'] ?> 
-                                <br> 
-                                Jenjang Studi : <?= $mahasiswa['jenjang_studi'] ?>
-                                <br>
-                            </div>
-                            <div class="col-md-7">
-                                Tempat Lahir : <?= $mahasiswa['tempat_lahir'] ?> 
-                                <br>
-                                Email : <?= $mahasiswa['email'] ?>
-                                <br>  
-                                <a href="<?= $pathUrl ?>mahasiswa_show.php?nim=<?= $mahasiswa['nim']; ?>" class="btn btn-link pull-right">Selengkapnya</a>
+                            <h4 class="media-heading"><b><?= $mahasiswa['nama'] ?></b></h4>
+                            <div class="col-md-9">
+                                Deskripsi : <br> <?= $mahasiswa['deskripsi'] ?> 
                             </div>
                         </div>
                     </div>                    
