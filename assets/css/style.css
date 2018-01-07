@@ -20,3 +20,7 @@ body {
 #wrapper{
 	padding-top:50px;
 }
+.navbar-default {
+  background-color: #f8f8f8;
+  border-color: #f8f8f8;
+}

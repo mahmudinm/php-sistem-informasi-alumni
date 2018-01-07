@@ -180,9 +180,9 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
             <div class="form-group">
                 <label for="foto" class="col-sm-2 control-label">Status</label>
                 <div class="col-md-6">    
-                        <?= ($mahasiswa['status'] == 1) ? 'Aktif' : ''; ?>
-                        <?= ($mahasiswa['status'] == 2) ? 'Alumni' : ''; ?>
-                        <?= ($mahasiswa['status'] == 3) ? 'DO' : ''; ?>
+                    <?= ($mahasiswa['status'] == 1) ? 'Aktif' : ''; ?>
+                    <?= ($mahasiswa['status'] == 2) ? 'Alumni' : ''; ?>
+                    <?= ($mahasiswa['status'] == 3) ? 'DO' : ''; ?>
                 </div>
             </div>
 
@@ -193,7 +193,7 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
     <br>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="assets/js/jquery-2.2.0.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 
 </body>

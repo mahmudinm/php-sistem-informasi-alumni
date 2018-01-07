@@ -1,8 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
 body {
-    padding-top: 50px;
+  padding-top: 50px;
+	font-family: 'Lato', sans-serif;
 }
 .jumbotron {
-    margin-top: 40px;
-    margin-bottom: 30px;
-    padding: 40px 15px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding: 40px 15px;
+}
+.navbar-default {
+  background-color: #f8f8f8;
+  border-color: #f8f8f8;
+}
+.search-form{
+	margin-top:8px;
+	border-radius:0px;
+	margin-left:10px;
 }
