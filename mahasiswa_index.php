@@ -67,6 +67,7 @@ $mahasiswas = $conn->query("SELECT * FROM users");
         <div class="well">
             <a href="<?= $pathUrl ?>mahasiswa_index.php" class="btn btn-sm btn-primary">Mahasiswa</a> 
             <a href="<?= $pathUrl ?>lowongan_index.php" class="btn btn-sm btn-primary">Lowongan</a>
+            <a href="<?= $pathUrl ?>alumni_index.php" class="btn btn-sm btn-primary">Alumni</a>
         </div>
         <h3>Data Mahasiswa</h3>
 
@@ -79,13 +80,6 @@ $mahasiswas = $conn->query("SELECT * FROM users");
                 <tr>
                     <th>NIM</th>
                     <th>Nama</th>
-                    <th>Email</th>
-                    <th>Program Studi</th>
-                    <th>Jenjang Studi</th>
-                    <th>Alamat Rumah</th>
-                    <th>Agama</th>
-                    <th>Handphone</th>
-                    <th>Status</th>
                     <th>Opsi</th>
                 </tr>
             </thead>
@@ -94,13 +88,6 @@ $mahasiswas = $conn->query("SELECT * FROM users");
                     <tr>
                         <td><?= $mahasiswa['nim']; ?></td>
                         <td><?= $mahasiswa['username']; ?></td>
-                        <td><?= $mahasiswa['email']; ?></td>
-                        <td><?= $mahasiswa['program_studi']; ?></td>
-                        <td><?= $mahasiswa['jenjang_studi']; ?></td>
-                        <td><?= $mahasiswa['alamat_rumah']; ?></td>
-                        <td><?= $mahasiswa['agama']; ?></td>
-                        <td><?= $mahasiswa['handphone']; ?></td>
-                        <td><?= $mahasiswa['status']; ?></td>
                         <td>
                             <a href="<?= $pathUrl ?>mahasiswa_edit.php?nim=<?= $mahasiswa['nim']; ?>" class="btn btn-xs btn-info">Edit</a> 
                             <a href="<?= $pathUrl ?>mahasiswa_delete.php?nim=<?= $mahasiswa['nim']; ?>" class="btn btn-xs btn-danger">Delete</a>

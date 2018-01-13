@@ -49,11 +49,9 @@ if (isset($_POST['btn-login'])) {
     <div id="login-form">
         <form method="post" autocomplete="off">
 
-            <div class="col-md-12">
+            <h1><b>Sistem informasi alumni </b></h1>
+            <div class="col-md-12 login-form__style">
 
-                <div class="form-group">
-                    <h2 class="">Login:</h2>
-                </div>
 
                 <div class="form-group">
                     <hr/>

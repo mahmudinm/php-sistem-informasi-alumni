@@ -67,6 +67,7 @@ $lowongans = $conn->query("SELECT * FROM lowongan");
         <div class="well">
             <a href="<?= $pathUrl ?>mahasiswa_index.php" class="btn btn-sm btn-primary">Mahasiswa</a> 
             <a href="<?= $pathUrl ?>lowongan_index.php" class="btn btn-sm btn-primary">Lowongan</a>
+            <a href="<?= $pathUrl ?>alumni_index.php" class="btn btn-sm btn-primary">Alumni</a>
         </div>
         <h3>Data Lowongan</h3>
 

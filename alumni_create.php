@@ -14,7 +14,6 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
     // Tambah data
     if (isset($_POST['submit'])) {
 
-
         if(!empty($_FILES['foto']))
         {
             // Ganti URL ini dengan nama folder kalian 
@@ -32,31 +31,28 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
 
         $nim = $_POST['nim'];
         $username = $_POST['username'];
-        // $email = $_POST['email'];
-        // $propinsi_asal = $_POST['propinsi_asal'];
-        // $program_studi = $_POST['program_studi'];
-        // $jenjang_studi = $_POST['jenjang_studi'];
-        // $tanggal_masuk = $_POST['tanggal_masuk'];
-        // $alamat_rumah = $_POST['alamat_rumah'];
-        // $kode_pos = $_POST['kode_pos'];
-        // $kota = $_POST['kota'];
-        // $nama_sekolah = $_POST['nama_sekolah'];
-        // $tempat_lahir = $_POST['tempat_lahir'];
-        // $agama = $_POST['agama'];
-        // $handphone = $_POST['handphone'];
+        $email = $_POST['email'];
+        $propinsi_asal = $_POST['propinsi_asal'];
+        $program_studi = $_POST['program_studi'];
+        $jenjang_studi = $_POST['jenjang_studi'];
+        $tanggal_masuk = $_POST['tanggal_masuk'];
+        $alamat_rumah = $_POST['alamat_rumah'];
+        $kode_pos = $_POST['kode_pos'];
+        $kota = $_POST['kota'];
+        $nama_sekolah = $_POST['nama_sekolah'];
+        $tempat_lahir = $_POST['tempat_lahir'];
+        $agama = $_POST['agama'];
+        $handphone = $_POST['handphone'];
         $foto = $_FILES['foto']['name'];
-        // $status = $_POST['status'];
+        $status = $_POST['status'];
 
 
         $password = hash('sha256', $nim);
 
 
-        // $query = "INSERT INTO `users` (`nim`, `username`, `email`, `password`, `program_studi`, `jenjang_studi`, `tanggal_masuk`, `propinsi_asal`, `alamat_rumah`, `kode_pos`, `kota`, `nama_sekolah`, `tempat_lahir`, `agama`, `handphone`, `foto`, `status`) VALUES ($nim, '$username', '$email', '$password', '$program_studi', '$jenjang_studi', '$tanggal_masuk', '$propinsi_asal', '$alamat_rumah', '$kode_pos', '$kota', '$nama_sekolah', '$tempat_lahir', '$agama', '$handphone', '$foto', $status)";        
-        $query1 = "INSERT INTO `users` (`nim`, `username`, `password`, `foto`) VALUES ($nim, '$username', '$password', '$foto')";        
-        $query2 = "INSERT INTO `alumni` (`nim`, `username`, `password`, `foto`) VALUES ($nim, '$username', '$password', '$foto')";        
+        $query = "INSERT INTO `users` (`nim`, `username`, `email`, `password`, `program_studi`, `jenjang_studi`, `tanggal_masuk`, `propinsi_asal`, `alamat_rumah`, `kode_pos`, `kota`, `nama_sekolah`, `tempat_lahir`, `agama`, `handphone`, `foto`, `status`) VALUES ($nim, '$username', '$email', '$password', '$program_studi', '$jenjang_studi', '$tanggal_masuk', '$propinsi_asal', '$alamat_rumah', '$kode_pos', '$kota', '$nama_sekolah', '$tempat_lahir', '$agama', '$handphone', '$foto', $status)";        
 
-        mysqli_query($conn, $query1);
-        mysqli_query($conn, $query2);
+        mysqli_query($conn, $query);
 
         header('location:mahasiswa_index.php');
     }
@@ -135,7 +131,7 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
                 </div>
             </div>
 
-<!--             <div class="form-group">
+            <div class="form-group">
                 <label for="email" class="col-sm-2 control-label">Email Mahasiswa</label>
                 <div class="col-md-6">                
                     <input type="email" name="email" id="email" class="form-control">
@@ -229,7 +225,7 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
                         <option value="3">DO</option>
                     </select>
                 </div>
-            </div> -->
+            </div>
 
 
             <div class="form-group">
